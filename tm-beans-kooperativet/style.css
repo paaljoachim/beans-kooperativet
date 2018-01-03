@@ -1,0 +1,696 @@
+/*
+Theme Name: Beans Kooperativet
+Description: Theme for the nonprofit site Kooperativet.
+Author: Beans
+Author URI: http://www.easywebdesigntutorials.com
+Template: tm-beans
+Version: 1.0.0
+Text Domain: tm-beans
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+
+
+/* Added body tag for sticky footer */
+html, body {
+	font: normal 18px / 20px sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;	
+	/* Sticky - footer */
+	margin:0;
+	padding:0;
+	height: 98%;
+	line-height: 1.4em;
+}
+
+.tm-site {
+	min-height: 100%;	/* Sticky code */
+	position: relative; /* Sticky code */
+	
+}
+	/* ------- HEADER ----*/
+	.tm-header {
+	 border-bottom: 0px solid white;
+	}
+
+	/* Below tm-site. */
+	.tm-header.uk-block {
+		height: 120px;
+		padding: 5px 0 0 0;
+		position: relative;	
+	}
+	
+	/* Adding opacity to the background header image. */
+	.tm-header.uk-block::after {
+		content : "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		
+		background: #fff url('images/Kooperativet-ukens-pose-mindre.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		
+		background-position: 30% 30%;
+		background-size: cover;		
+		width: 100%;
+		height: 100%;
+		opacity : 0.65;
+		filter: alpha(opacity=65);
+		z-index: 1;	
+	}
+				
+				
+	/* Inside header and uk-container - the site branding */
+	.tm-site-branding {
+		margin-bottom: -30px;
+		z-index: 100;	
+		padding: 0;
+		position: absolute;
+		z-index: 2;
+	}
+					
+					
+	/* Logo */
+	.tm-site-branding, 
+	.tm-site-branding a {
+		color: #f99b1c;
+		text-decoration: none;
+		font-size: 30px;
+		font-weight: 500;
+		font-family: trebuchet ms, serif;
+		z-index: 100; /* On top of tm primary menu. */
+	}
+															
+
+/*-------  TOP MENU  -------*/
+
+ /* Top menu */
+.tm-primary-menu {
+	margin: 0;
+	padding: 3px 0 3px 30%;
+    color: green;
+	width: 70%; 
+	height: 40px;
+	background: rgba(191, 151, 75, 0.27);	    
+}
+
+/* Login/out link */
+.menu-item-3318 {
+	margin: 3px 0 3px 250px;
+	/*background: white;*/
+	color: red;
+	/*border-radius: 9px;
+	box-shadow: 0px 1px 2px #444;*/
+	
+}
+
+.tm-primary-menu a:hover{
+	color: #827070 !important;
+	background-color: none !important;
+}
+
+
+.current-menu-item {
+	color: #a6a1a1 !important;
+	background-color: #edecec !important;
+}
+
+ /* I had to remove the background rectangle box that showed up when clicking the links. I inserted the background color of the menu to remove it. */
+.uk-navbar-nav > li > a:active,
+.uk-navbar-nav > li > a:focus,
+.uk-navbar-nav > li > a {
+    background-color: rgba(102, 94, 94, 0) !important;
+    color: #ccc;
+}
+
+
+
+
+/* ------ Main area ----*/
+		
+	/* Level 2. Below tm-site. */
+	/* body/content for sticky footer */
+	.tm-main.uk-block {
+		padding: 0;
+	}	
+				
+	/* level 5. Inside main, container and uk-grid is tm-primary. */
+	.tm-primary {
+		padding: 0;
+		margin-bottom: 30px;
+	}
+	
+	/* level 6. Inside main, container, uk-grid is tm-content. */
+	.tm-content,
+	#content {
+		padding-top: 40px;
+		margin: 15px 0 0 30px;
+	}
+	
+	/* content area in a page. */
+	.tm-article-content {
+		margin-top: 40px;
+	}
+						
+	/* level 5. Inside main, uk-container and uk-grid is tm-secondary. */
+	.tm-secondary {
+		width: 240px;	
+		padding: 200px 5px 20px 40px;
+	}			
+	
+	.home .uk-article-title	{
+		display: none;
+	}	
+	
+	.home .tm-content {
+		margin-top: 5px;
+		padding-top: 5px;
+	}				
+				
+/* ------ BLOG ----*/
+
+/* Styling category pages and the post. */
+.archive .uk-article {
+	border: 2px strong #ccc;
+	padding: 5px;
+	box-shadow: 0px 3px 5px #444;
+	background: #eee3ce;
+}
+
+/* Styling the post/article in the blog page. */
+.blog .uk-article {
+	margin-top: 10px; /* Giving more space to the menu above. */
+	border: 2px strong #ccc;
+	padding: 5px;
+	box-shadow: 0px 3px 5px #444;
+	background: #eee3ce;
+}
+
+/* Styling image in the category and blog page.*/
+.tm-article-image {
+      float: left;
+      padding: 0 15px 0 0;
+      margin: 3px;
+}
+
+/* A new CSS class for adjusting the Category titles */
+.archive-title {
+    font-size: 22px;
+    padding: 0;
+    margin-left: 50px;
+    width: 100%;
+    
+    height: 36px;
+    font-weight: normal;
+    text-transform: none;
+}
+
+/* Blog post titles */
+.blog .uk-article-title {
+	font-size: 20px;
+} 
+				
+	
+	
+	
+/* -------- Footer area ----- */								
+	
+/* level 2 */
+.tm-mega-footer.uk-block {
+	background: #c0f2fe;
+	padding-top: 3px;
+		
+	height: 185px; /* Covers the footer menu and copyright info. */
+	z-index: 10;
+	text-align: center !important;
+		
+	/* Sticky code */
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.footer-widget {
+	border-top: 1px solid #e5e4e4;
+	background: #e5e4e4;
+}
+
+
+/**** Footer menu info ****/
+.uk-navbar-nav > li > a {
+    text-decoration: none;
+   
+    padding: 0 15px;
+    line-height: 40px;
+    color: green;
+    font-size: 18px;
+    font-family: sans-serif, trebuchet ms, Verdana,;
+    font-weight: normal;
+}
+
+.tm-footer-menu .uk-navbar-nav .current-menu-item a{
+	color: #ccc;
+}
+
+.uk-navbar-nav > li > a:hover {
+	color: blue;
+	background-color: #665e5e;
+}
+
+
+/*-----------------------*/
+
+.uk-margin-bottom {
+    margin-bottom: 10px !important;
+}
+
+.tm-footer {
+	padding-top: 3px;
+	border-top: none !important;
+	height: 85px; /* Covers the footer menu and copyright info. */
+	z-index: 10;
+	text-align: center !important;
+	
+	/* Sticky code */
+	position: absolute;
+	bottom: 0;
+	width: 100%;	
+	clear: both;	
+}
+
+.footer-widget.uk-block {
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+
+
+/* --------- Caldera Forms ----*/
+#CF5a3ce3a94d2af_1-row-4 {
+	height: 70px;
+}
+
+
+
+/*------ Footer navbar -------*/
+/* Footer navbar */
+.tm-footer-menu {
+    display: inline-block;
+  	float: none;
+  	text-align: center;
+  	max-width: 100%;
+  	height: 30px;
+  	padding: 20px 0 20px 0;
+}
+
+.tm-footer-menu a {
+	text-transform: none;
+	padding-left: 0;
+}
+
+
+/*--- Copyright area -----*/
+
+.tm-sub-footer {
+    color: #00313e;
+    font-size: 14px;
+    margin: 3px 0 0 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    clear: both;
+ }
+
+
+.tm-sub-footer a {
+    color: #017a9a;
+    text-decoration: underline;
+}
+
+/* A better control of the copyright area with this class. */
+.copyright-footer-full {  
+   margin: 0;
+   padding: 2px;
+   max-width: 100%; /* Full width bar */
+   background: #e5e4e4;
+}
+
+
+
+/* --------------- Widget locations ----------------*/
+
+.textwidget {
+	font-size: 12px;
+}
+
+
+/* --------- WooCommerce ------*/
+
+/* Related products title is squshed between left and right column. */
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,
+summary .related products{
+   display:block;
+    clear: both;
+}
+
+
+/* Shop page change background color to white marking in amount of products available in each category. */
+mark {
+	background-color: #fff;
+}
+
+/* My account side area links. */
+li.woocommerce-MyAccount-navigation-link {
+	
+}
+
+/* --------- Checkout -- Order page ------- */
+
+/* Remove cart message in check out page. */
+/* https://stackoverflow.com/questions/22927419/woocommerce-checkout-page-remove-view-cart-button-other-messages*/ 
+.woocommerce-checkout .woocommerce-message, .woocommerce-info {
+    display: none;
+} 
+
+/* Hide default checkout message: Opprett din profil hos Kooperativet. / Logg inn hvis du allerede er medlem. When order has been sent. */
+.woocommerce-order-received .tm-article-content h3  {
+	display: none;
+}
+
+
+
+/* --------- STYLING WooCommerce buttons and links. ---*/
+ .woocommerce a.button, .woocommerce a.button.alt, .woocommerce button.button, .woocommerce button.button.alt, .woocommerce input.button, .woocommerce input.button.alt, .woocommerce input.button[type="submit"], .woocommerce #respond input#submit, .woocommerce #respond input#submit.alt {
+     background-color: #018901 !important; /* Adjusted */
+     border-radius: 5px;
+     border: 2px solid #22a1c4;
+     color: #fff !important;
+ }
+
+
+
+/* https://wpsites.net/web-design/genesis-3-ways-to-remove-the-primary-sidebar-from-single-pages/ */
+.archive .sidebar-primary {
+display: none;
+}
+
+#pickup {
+	color: red;
+	font-size: 18px;
+}
+
+
+/* HIDE WooCommerce header. 
+.woocommerce-products-header {
+	display: none;
+}
+*/
+
+
+/* Remove price for vakt on single page and shop page. */
+.post-3366 p.price,
+.post-3366 .price {
+    color: #77a464;
+    font-size: 1.25em;
+    display: none !important;
+}
+
+
+
+
+/* Next and previous buttons seen on a product page. */
+.prev_next_buttons {
+line-height: 40px;
+margin-bottom: 20px;
+}
+ 
+.prev_next_buttons a[rel="prev"], .prev_next_buttons a[rel="next"] {
+display: block;
+}
+ 
+.prev_next_buttons a[rel="prev"] {
+float: right;
+}
+ 
+.prev_next_buttons a[rel="next"] {
+float: left;
+}
+ 
+.prev_next_buttons::after {
+content: '';
+display: block;
+clear:both;
+}
+
+
+/* Cart */
+
+.woocommerce-cart-form {
+    line-height: 1.75;
+    width: 800px !important;
+    margin: auto !important;
+}
+
+/* Change the delete icon in the cart. Cart page. */
+
+/* https://businessbloomer.com/woocommerce-change-remove-item-icon-cart/#more-21107 
+https://woocommercecommunity.slack.com/archives/C1KAZ91E3/p1512580846000103?thread_ts=1512528458.000178&cid=C1KAZ91E3 */ 
+.woocommerce a.remove,
+.woocommerce a.remove:before {
+  font-family: 'dashicons';		 	 
+  /*content: "\f182";*/
+  font-size: 24px;
+  color: #c72204;   
+}
+.woocommerce a.remove:hover {
+	text-shadow: 1px 1px 1px #000;
+    color: blue !important;
+    background-color: white !important;   /* Removes the default read background. */
+}
+
+/* Add to cart message containing two buttons. Single product page. Creating some space between the two buttons. And all other Woo buttons as well. */
+.woocommerce a.button {
+	margin: 1px !important;
+}
+
+
+/* Makes the featured single product image not clickable by changing the pointer. */
+.woocommerce div.product div.images .woocommerce-product-gallery__wrapper {
+    pointer-events: none;
+}
+
+/* I am removing the Beans pagination on WooCommerce single product pages. */
+.prev_next_buttons {
+    line-height: 40px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+
+li.menu-item {
+	color: green;
+}
+
+
+/* ---------- Mobile off canvas menu ------------ */
+a.uk-button.uk-hidden-large {
+	margin-left: 30px;
+}
+
+.uk-offcanvas-bar {
+	background: rgba(191,151,75,.27);
+	padding-top: 10px;
+}
+
+.uk-nav-offcanvas>li>a {
+    color: green;
+    padding: 10px 15px;
+}
+
+/* Mobile Off Canvas widget - menu. */
+.uk-offcanvas .uk-panel a:not([class]) {
+    color: green;
+}
+
+
+
+@media only screen and (max-width: 1250px) {
+
+.tm-logo {
+	width: 155px;
+}
+	
+/* Login/out link */
+.menu-item-3318 {
+	margin: 0 0 3px 50px;
+	color: red;	
+}
+
+/* Primary sidebar */
+.tm-secondary {
+	width: 220px !important;
+	padding-top: 70px;
+	/* background: yellow;	 */
+	margin-bottom: 30px;
+} 	
+
+/* Primary sidebar - title */
+.uk-panel-title {
+	font-size: 14px;
+	padding-top: 5px;
+	margin: 0;
+	line-height: 14px;
+}	
+	
+/* Main content area */	
+.tm-primary {
+  /*  background: red !important; */
+	width: 70% !important;
+}	
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    float: left;
+    padding: 0;
+    position: relative;
+    width: 20%;
+    margin-left: 10px;
+}
+
+.woocommerce .products ul, .woocommerce ul.products {
+    width: 900px;
+}
+
+
+}
+
+
+@media only screen and (max-width: 900px) and (min-width: 781px) {
+
+.tm-logo {
+	width: 140px;
+}
+
+
+#content {
+	width: 680px;
+}
+
+.woocommerce .products ul, .woocommerce ul.products {
+    width: 680px;
+}
+	
+/* Single product image */
+	.woocommerce #content div.product div.images, .woocommerce div.product div.images, .woocommerce-page #content div.product div.images, .woocommerce-page div.product div.images {
+    float: left;
+    width: 28%;
+}
+	/* Single product information */
+	.woocommerce #content div.product div.summary, .woocommerce div.product div.summary, .woocommerce-page #content div.product div.summary, .woocommerce-page div.product div.summary {
+    float: left;
+    width: 48%;
+	padding-left: 15px;	
+}
+
+}
+
+
+
+@media only screen and (max-width: 780px) {
+ 
+ .tm-header.uk-block {
+     height: 90px;
+     padding: 5px 0 0 0; 
+ }
+ 
+ .tm-logo {
+ 	width: 135px;
+ }
+ 
+ .tm-primary-menu.uk-navbar {
+ 	padding-top: 20px;
+ }
+
+/* Sidebar */
+ .tm-secondary {	
+ 	width: 100% !important;
+	height: 130px;
+	padding: 0 0 0 160px;
+	margin: 0;
+	background: lighten; 
+ }
+
+/* widgets inside the secondary area. */ 
+.tm-secondary .tm-widget {
+	width: 110px;
+	float: left;
+	padding: 15px;
+	margin: 0 !important;
+}	
+	
+.uk-grid {
+	margin-left: 0;		
+}
+	
+/* Main content area */ 
+ .tm-primary {
+	width: 100% !important;
+	padding: 5px;
+ }
+ 
+ .uk-push-1-4 {
+     left: 2%;
+ }
+ 
+ 
+ .uk-pull-3-4 {
+     left: 50px !important;
+ }
+ 
+ .woocommerce .products ul, .woocommerce ul.products {
+     width: 600px;
+ } 
+ 
+ .tm-footer-menu {
+     display: block;
+     /* float: left; */
+     text-align: center;
+     max-width: 100%;
+     height: 30px;
+     font-size: 12px;
+ }
+ 
+
+}
+
+
+@media only screen and (max-width: 650px) {
+	
+.tm-logo {
+ 	width: 105px;
+}
+
+/* Sidebar */
+ .tm-secondary {	
+ 	width: 100% !important;
+	height: 130px;
+	padding: 20px 5px 5px 5px;
+	margin: 0;
+	background: lighten; 
+ }
+	
+/* widgets inside the secondary area. */ 
+.tm-secondary .tm-widget {
+	width: 95px;
+	float: left;
+	padding: 5px;
+	margin: 0 !important;
+}	
+	
+#content {
+	width: 450px;
+}
+	
+.woocommerce .products ul, .woocommerce ul.products {
+	   width: 450px;
+} 
+}
