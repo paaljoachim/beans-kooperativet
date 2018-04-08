@@ -1,2 +1,2 @@
-# beans-kooperativet
-A beans WordPress theme to be used for the Kooperativet web site
+# beans-koop
+A beans WordPress theme test for the Kooperativet web site.
